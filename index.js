@@ -249,8 +249,7 @@ function get20s(array) {
   const twentycentArtists = [];
 
   for ( let i = 0; i < array.length; i++){
-    let bornYears = array[i].years.split(/[.,!,?,-]/, 2);
-    if (array[i].years >= 1900 && array[i].years <= 2000  ){
+    if (array[i].years.includes(190)){
       twentycentArtists.push(array[i].name);
     }
   }
@@ -316,7 +315,7 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(array) {
   let hunPaint = [];
   for ( let i = 0; i < array.length; i++){
-    if (array[i].paintings >= '100'){
+    if (array[i].paintings >= 100){
       hunPaint.push(array[i].name)
     }
   }
